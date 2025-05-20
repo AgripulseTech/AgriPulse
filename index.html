@@ -1,363 +1,205 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AgriPulse - Smart Farming Solutions</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriPulse - Smart Farming Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body class="bg-gray-50 font-sans">
-
-    <!-- Header -->
-
-    <header class="bg-green-800 text-white sticky top-0 z-20 shadow-lg">
-
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-
-            <div class="text-3xl font-bold flex items-center">
-
-                <i class="fas fa-leaf mr-2"></i> AgriPulse
-
-            </div>
-
-            <ul class="hidden md:flex space-x-8 text-lg">
-
-                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
-
-                <li><a href="products.html" class="hover:text-green-200">Products</a></li>
-
-                <li><a href="about.html" class="hover:text-green-200">About</a></li>
-
-                <li><a href="news.html" class="hover:text-green-200">News</a></li>
-
-                <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
-
-                <li><a href="support.html" class="hover:text-green-200">Support</a></li>
-
-            </ul>
-
-            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-
-                <i class="fas fa-bars text-2xl"></i>
-
-            </button>
-
-        </nav>
-
-        <!-- Mobile Menu -->
-
-        <div id="mobileMenu" class="hidden md:hidden bg-green-700 text-white px-6 py-4">
-
-            <ul class="space-y-4">
-
-                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
-
-                <li><a href="products.html" class="hover:text-green-200">Products</a></li>
-
-                <li><a href="about.html" class="hover:text-green-200">About</a></li>
-
-                <li><a href="news.html" class="hover:text-green-200">News</a></li>
-
-                <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
-
-                <li><a href="support.html" class="hover:text-green-200">Support</a></li>
-
-            </ul>
-
-        </div>
-
-    </header>
-
- 
-
-    <!-- Hero Section -->
-
-    <section id="home" class="bg-gradient-to-r from-green-100 to-green-200 py-24">
-
-        <div class="container mx-auto px-6 text-center">
-
-            <h1 class="text-5xl md:text-6xl font-extrabold text-green-800 mb-6 leading-tight">Pulsing Innovation into South African Farms</h1>
-
-            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">AgriPulse delivers affordable IoT solutions to small-scale farmers in KwaZulu-Natal, Eastern Cape, and Western Cape, tackling water scarcity and livestock theft.</p>
-
-            <div class="flex justify-center space-x-4">
-
-                <button onclick="openWhatsAppModal()" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 flex items-center">
-
-                    <i class="fab fa-whatsapp mr-2"></i> Contact via WhatsApp
-
-                </button>
-
-                <a href="products.html" class="bg-white text-green-800 px-8 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50">Explore Products</a>
-
-            </div>
-
-        </div>
-
-    </section>
-
- 
-
-    <!-- Mission Section -->
-
-    <section class="py-16 bg-white">
-
-        <div class="container mx-auto px-6 text-center">
-
-            <h2 class="text-4xl font-bold text-green-800 mb-6">Our Mission</h2>
-
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-
-                AgriPulse empowers small-scale farmers with intelligent IoT systems for optimized irrigation and discreet livestock protection. Our vision is to become South Africa’s leading provider of smart farming solutions, driving sustainability and productivity.
-
-            </p>
-
-        </div>
-
-    </section>
-
- 
-
-    <!-- Product Highlights -->
-
-    <section class="py-16 bg-green-50">
-
-        <div class="container mx-auto px-6">
-
-            <h2 class="text-4xl font-bold text-center text-green-800 mb-12">Our Solutions</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-
-                    <img src="https://via.placeholder.com/300x200?text=SAIS" alt="SAIS" class="w-full h-48 object-cover rounded-t-lg">
-
-                    <h3 class="text-2xl font-semibold text-green-700 mt-4 mb-2">SAIS</h3>
-
-                    <p class="text-gray-600">AI-driven irrigation saves 30–40% water and boosts yields by 10–20%. Price: R2,160 + R216–R336/month.</p>
-
-                    <a href="products.html#sais" class="text-green-600 hover:underline mt-4 inline-block">Learn More</a>
-
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-
-                    <img src="https://via.placeholder.com/300x200?text=Livestock+Tracker" alt="Livestock Tracker" class="w-full h-48 object-cover rounded-t-lg">
-
-                    <h3 class="text-2xl font-semibold text-green-700 mt-4 mb-2">Livestock Tracker</h3>
-
-                    <p class="text-gray-600">Discreet GPS tags reduce theft by 90%. Price: R1,800 (Base) + R480/Tag + R96/month.</p>
-
-                    <a href="products.html#tracker" class="text-green-600 hover:underline mt-4 inline-block">Learn More</a>
-
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-
-                    <img src="https://via.placeholder.com/300x200?text=AgriPulse+App" alt="AgriPulse App" class="w-full h-48 object-cover rounded-t-lg">
-
-                    <h3 class="text-2xl font-semibold text-green-700 mt-4 mb-2">AgriPulse App</h3>
-
-                    <p class="text-gray-600">Unified platform for real-time farm data and alerts.</p>
-
-                    <a href="products.html#app" class="text-green-600 hover:underline mt-4 inline-block">Learn More</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
- 
-
-    <!-- Research & Impact -->
-
-    <section class="py-16 bg-white">
-
-        <div class="container mx-auto px-6">
-
-            <h2 class="text-4xl font-bold text-center text-green-800 mb-12">Research & Impact</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="bg-green-50 p-6 rounded-lg shadow-md">
-
-                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Tackling Water Scarcity</h3>
-
-                    <p class="text-gray-700">
-
-                        Western Cape faces R500M/year in drought-related losses, while KwaZulu-Natal loses R300M (Agri SA, 2023). Small-scale farmers spend 70–80% of their time on manual irrigation, with inefficient water use reducing yields. AgriPulse’s SAIS uses AI-driven irrigation, precision soil sensors, and weather integration to save 30–40% water and automate 80% of tasks. Unlike costly enterprise solutions (R20,000+), SAIS costs R2,160 with subscriptions from R216/month, offering unmatched affordability and crop-specific analytics for maize, citrus, and more.
-
-                    </p>
-
-                </div>
-
-                <div class="bg-green-50 p-6 rounded-lg shadow-md">
-
-                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Combating Livestock Theft</h3>
-
-                    <p class="text-gray-700">
-
-                        Livestock theft costs South Africa R1.4B annually, with Eastern Cape and KwaZulu-Natal as hotspots (SAPS, 2023). Traditional GPS tags (R500+) are bulky and visible, making them easy targets. AgriPulse’s Livestock Tracker uses discreet, tamper-proof tags (5cm x 3cm, camouflaged) with solar-powered 6-month battery life, reducing theft by 90%. Priced at R1,800 (base) and R480/tag, it offers silent alerts and geofencing, outpacing competitors with its stealth design and herd analytics.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
- 
-
-    <!-- Footer -->
-
-    <footer class="bg-green-800 text-white py-8">
-
-        <div class="container mx-auto px-6">
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <div>
-
-                    <h3 class="text-xl font-bold mb-4">AgriPulse</h3>
-
-                    <p class="text-green-200">Pulsing innovation into South African agriculture with IoT solutions for small-scale farmers.</p>
-
-                </div>
-
-                <div>
-
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-
-                    <ul class="space-y-2">
-
-                        <li><a href="products.html" class="text-green-200 hover:underline">Products</a></li>
-
-                        <li><a href="about.html" class="text-green-200 hover:underline">About</a></li>
-
-                        <li><a href="contact.html" class="text-green-200 hover:underline">Contact</a></li>
-
-                        <li><a href="support.html" class="text-green-200 hover:underline">Support</a></li>
-
-                    </ul>
-
-                </div>
-
-                <div>
-
-                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-
-                    <p class="text-green-200">Email: <a href="mailto:infoagripulse@gmail.com" class="hover:underline">infoagripulse@gmail.com</a></p>
-
-                    <button onclick="openWhatsAppModal()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 flex items-center">
-
-                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <div class="mt-8 text-center">
-
-                <p>© 2025 AgriPulse. All rights reserved. | <a href="#" class="text-green-200 hover:underline">Privacy Policy</a> | <a href="#" class="text-green-200 hover:underline">Terms of Service</a></p>
-
-            </div>
-
-        </div>
-
-    </footer>
-
- 
-
-    <!-- WhatsApp Modal -->
-
-    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30">
-
-        <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
-
-            <h3 class="text-2xl font-bold text-green-800 mb-4">Connect via WhatsApp</h3>
-
-            <p class="text-gray-700 mb-6">Contact AgriPulse for inquiries, support, or to learn more about our smart farming solutions.</p>
-
-            <a href="https://wa.me/27752921162" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 inline-block">Open WhatsApp</a>
-
-            <button onclick="closeWhatsAppModal()" class="mt-4 text-gray-600 hover:underline">Close</button>
-
-        </div>
-
-    </div>
-
- 
-
-    <script>
-
-        // Mobile Menu Toggle
-
-        function toggleMenu() {
-
-            const menu = document.getElementById('mobileMenu');
-
-            menu.classList.toggle('hidden');
-
-        }
-
- 
-
-        // WhatsApp Modal Functions
-
-        function openWhatsAppModal() {
-
-            document.getElementById('whatsappModal').classList.remove('hidden');
-
-        }
-
- 
-
-        function closeWhatsAppModal() {
-
-            document.getElementById('whatsappModal').classList.add('hidden');
-
-        }
-
- 
-
-        // Smooth Scrolling
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-            anchor.addEventListener('click', function (e) {
-
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-
-                    behavior: 'smooth'
-
-                });
-
-            });
-
-        });
-
-    </script>
-
+    <!-- Header -->
+    <header class="bg-green-800 text-white sticky top-0 z-20 shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl sm:text-3xl font-bold flex items-center">
+                <i class="fas fa-leaf mr-2"></i> AgriPulse
+            </div>
+            <ul class="hidden md:flex space-x-6 text-base lg:text-lg">
+                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-200">Products</a></li>
+                <li><a href="about.html" class="hover:text-green-200">About</a></li>
+                <li><a href="news.html" class="hover:text-green-200">News</a></li>
+                <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+                <li><a href="support.html" class="hover:text-green-200">Support</a></li>
+            </ul>
+            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars text-xl sm:text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-700 text-white px-4 sm:px-6 py-4">
+            <ul class="space-y-3 text-base">
+                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-200">Products</a></li>
+                <li><a href="about.html" class="hover:text-green-200">About</a></li>
+                <li><a href="news.html" class="hover:text-green-200">News</a></li>
+                <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+                <li><a href="support.html" class="hover:text-green-200">Support</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-green-100 to-green-200 py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-green-800 mb-4 sm:mb-6 leading-tight">Pulsing Innovation into South African Farms</h1>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-700 mb-6 sm:mb-8 max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto">AgriPulse delivers affordable IoT solutions to small-scale farmers in KwaZulu-Natal, Eastern Cape, and Western Cape, tackling water scarcity and livestock theft.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button onclick="openWhatsAppModal()" class="bg-green-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-green-700 flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Contact via WhatsApp
+                </button>
+                <a href="products.html" class="bg-white text-green-800 px-6 sm:px-8 py-2 sm:py-3 rounded-lg border-2 border-green-600 hover:bg-green-50">Explore Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-800 mb-4 sm:mb-6">Our Mission</h2>
+            <p class="text-base sm:text-lg text-gray-700 max-w-xl sm:max-w-2xl mx-auto">
+                AgriPulse empowers small-scale farmers with intelligent IoT systems for optimized irrigation and discreet livestock protection. Our vision is to become South Africa’s leading provider of smart farming solutions, driving sustainability and productivity.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Highlights -->
+    <section class="py-12 sm:py-16 bg-green-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-green-800 mb-8 sm:mb-12">Our Solutions</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <!-- Replace placeholder with actual image -->
+                    <img src="https://via.placeholder.com/300x200?text=SAIS" alt="SAIS" class="w-full h-40 sm:h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mt-4 mb-2">SAIS</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">AI-driven irrigation saves 30–40% water and boosts yields by 10–20%. Price: R2,160 + R216–R336/month.</p>
+                    <a href="products.html#sais" class="text-green-600 hover:underline mt-4 inline-block text-sm sm:text-base">Learn More</a>
+                </div>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <!-- Replace placeholder with actual image -->
+                    <img src="https://via.placeholder.com/300x200?text=Livestock+Tracker" alt="Livestock Tracker" class="w-full h-40 sm:h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mt-4 mb-2">Livestock Tracker</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Discreet GPS tags reduce theft by 90%. Price: R1,800 (Base) + R480/Tag + R96/month.</p>
+                    <a href="products.html#tracker" class="text-green-600 hover:underline mt-4 inline-block text-sm sm:text-base">Learn More</a>
+                </div>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <!-- Replace placeholder with actual image -->
+                    <img src="https://via.placeholder.com/300x200?text=AgriPulse+App" alt="AgriPulse App" class="w-full h-40 sm:h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mt-4 mb-2">AgriPulse App</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Unified platform for real-time farm data and alerts. Included with SAIS and Livestock Tracker.</p>
+                    <a href="products.html#app" class="text-green-600 hover:underline mt-4 inline-block text-sm sm:text-base">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Impact -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-green-800 mb-8 sm:mb-12">Research & Impact</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                <div class="bg-green-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mb-4">Tackling Water Scarcity</h3>
+                    <p class="text-gray-700 text-sm sm:text-base">
+                        Western Cape faces R500M/year in drought-related losses, while KwaZulu-Natal loses R300M (Agri SA, 2023). Small-scale farmers spend 70–80% of their time on manual irrigation, with inefficient water use reducing yields. AgriPulse’s SAIS uses AI-driven irrigation, precision soil sensors, and weather integration to save 30–40% water and automate 80% of tasks. Unlike costly enterprise solutions (R20,000+), SAIS costs R2,160 with subscriptions from R216/month, offering unmatched affordability and crop-specific analytics for maize, citrus, and more.
+                    </p>
+                </div>
+                <div class="bg-green-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mb-4">Combating Livestock Theft</h3>
+                    <p class="text-gray-700 text-sm sm:text-base">
+                        Livestock theft costs South Africa R1.4B annually, with Eastern Cape and KwaZulu-Natal as hotspots (SAPS, 2023). Traditional GPS tags (R500+) are bulky and visible, making them easy targets. AgriPulse’s Livestock Tracker uses discreet, tamper-proof tags (5cm x 3cm, camouflaged) with solar-powered 6-month battery life, reducing theft by 90%. Priced at R1,800 (base) and R480/tag, it offers silent alerts and geofencing, outpacing competitors with its stealth design and herd analytics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">AgriPulse</h3>
+                    <p class="text-green-200 text-sm sm:text-base">Pulsing innovation into South African agriculture with IoT solutions for small-scale farmers.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li><a href="products.html" class="text-green-200 hover:underline">Products</a></li>
+                        <li><a href="about.html" class="text-green-200 hover:underline">About</a></li>
+                        <li><a href="contact.html" class="text-green-200 hover:underline">Contact</a></li>
+                        <li><a href="support.html" class="text-green-200 hover:underline">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-green-200 text-sm sm:text-base">Email: <a href="mailto:infoagripulse@gmail.com" class="hover:underline">infoagripulse@gmail.com</a></p>
+                    <button onclick="openWhatsAppModal()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 flex items-center text-sm sm:text-base">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                    </button>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">Follow Us</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li>
+                            <a href="https://www.tiktok.com/@agri_pulse2" target="_blank" class="text-green-200 hover:underline flex items-center">
+                                <i class="fab fa-tiktok mr-2"></i> TikTok
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.fb.com/l/6lp1kJRRR" target="_blank" class="text-green-200 hover:underline flex items-center">
+                                <i class="fab fa-facebook mr-2"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/agripulse_tech?igsh=NXB5ZG92ZGw0ZDNp" target="_blank" class="text-green-200 hover:underline flex items-center">
+                                <i class="fab fa-instagram mr-2"></i> Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-sm sm:text-base">© 2025 AgriPulse. All rights reserved. | <a href="#" class="text-green-200 hover:underline">Privacy Policy</a> | <a href="#" class="text-green-200 hover:underline">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Modal -->
+    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full max-w-sm sm:max-w-md">
+            <h3 class="text-xl sm:text-2xl font-bold text-green-800 mb-4">Connect via WhatsApp</h3>
+            <p class="text-gray-700 text-sm sm:text-base mb-6">Contact AgriPulse for inquiries, support, or to learn more about our smart farming solutions.</p>
+            <a href="https://wa.me/27752921162" target="_blank" class="bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-green-700 inline-block">Open WhatsApp</a>
+            <button onclick="closeWhatsAppModal()" class="mt-4 text-gray-600 hover:underline text-sm sm:text-base">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // WhatsApp Modal Functions
+        function openWhatsAppModal() {
+            document.getElementById('whatsappModal').classList.remove('hidden');
+        }
+
+        function closeWhatsAppModal() {
+            document.getElementById('whatsappModal').classList.add('hidden');
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-
-</html>
+  </html>
