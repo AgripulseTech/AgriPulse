@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - AgriPulse</title>
+    <title>AgriPulse - Smart Farming Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -13,10 +13,10 @@
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <!-- Logo -->
             <div class="flex justify-center mb-4">
-                <img src="images/logo.jpg" alt="AgriPulse Logo" class="h-24 sm:h-32 lg:h-40 object-contain">
+                <img src="images/logo.jpg" alt="AgriPulse Logo" class="h-32 sm:h-48 lg:h-64 object-contain">
             </div>
             <!-- Navigation -->
-            <nav class="flex justify-between items-center">
+            <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
                 <div class="text-2xl sm:text-3xl font-bold flex items-center">
                     <i class="fas fa-leaf mr-2"></i> AgriPulse
                 </div>
@@ -32,6 +32,7 @@
                     <i class="fas fa-bars text-xl sm:text-2xl"></i>
                 </button>
             </nav>
+            <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden bg-green-700 text-white px-4 sm:px-6 py-4">
                 <ul class="space-y-3 text-base">
                     <li><a href="index.html" class="hover:text-green-200">Home</a></li>
@@ -45,12 +46,80 @@
         </div>
     </header>
 
-    <!-- Main Content (Placeholder) -->
-    <main class="container mx-auto px-4 sm:px-6 py-12">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-green-800 mb-4 text-center">Welcome to AgriPulse</h1>
-        <p class="text-base sm:text-lg lg:text-xl text-gray-700 text-center">Pulsing innovation into South African agriculture with IoT solutions for small-scale farmers.</p>
-        <!-- Add more content here as needed -->
-    </main>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-green-100 to-green-200 py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-green-800 mb-4 sm:mb-6 leading-tight">Pulsing Innovation into South African Farms</h1>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-700 mb-6 sm:mb-8 max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto">AgriPulse delivers affordable IoT solutions to small-scale farmers in KwaZulu-Natal, Eastern Cape, and Western Cape, tackling water scarcity and livestock theft.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button onclick="openWhatsAppModal()" class="bg-green-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-green-700 flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Contact via WhatsApp
+                </button>
+                <a href="products.html" class="bg-white text-green-800 px-6 sm:px-8 py-2 sm:py-3 rounded-lg border-2 border-green-600 hover:bg-green-50">Explore Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-800 mb-4 sm:mb-6">Our Mission</h2>
+            <p class="text-base sm:text-lg text-gray-700 max-w-xl sm:max-w-2xl mx-auto">
+                AgriPulse empowers small-scale farmers with intelligent IoT systems for optimized irrigation and discreet livestock protection. Our vision is to become South Africa’s leading provider of smart farming solutions, driving sustainability and productivity.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Highlights -->
+    <section class="py-12 sm:py-16 bg-green-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-green-800 mb-8 sm:mb-12">Our Solutions</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <!-- Replace placeholder with actual image -->
+                    <img src="https://via.placeholder.com/300x200?text=SAIS" alt="SAIS" class="w-full h-40 sm:h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mt-4 mb-2">SAIS</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">AI-driven irrigation saves 30–40% water and boosts yields by 10–20%. Price: R2,160 + R216–R336/month.</p>
+                    <a href="products.html#sais" class="text-green-600 hover:underline mt-4 inline-block text-sm sm:text-base">Learn More</a>
+                </div>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <!-- Replace placeholder with actual image -->
+                    <img src="https://via.placeholder.com/300x200?text=Livestock+Tracker" alt="Livestock Tracker" class="w-full h-40 sm:h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mt-4 mb-2">Livestock Tracker</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Discreet GPS tags reduce theft by 90%. Price: R1,800 (Base) + R480/Tag + R96/month.</p>
+                    <a href="products.html#tracker" class="text-green-600 hover:underline mt-4 inline-block text-sm sm:text-base">Learn More</a>
+                </div>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <!-- Replace placeholder with actual image -->
+                    <img src="https://via.placeholder.com/300x200?text=AgriPulse+App" alt="AgriPulse App" class="w-full h-40 sm:h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mt-4 mb-2">AgriPulse App</h3>
+                    <p class="text-gray-600 text-sm sm:text-base">Unified platform for real-time farm data and alerts. Included with SAIS and Livestock Tracker.</p>
+                    <a href="products.html#app" class="text-green-600 hover:underline mt-4 inline-block text-sm sm:text-base">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Impact -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-green-800 mb-8 sm:mb-12">Research & Impact</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                <div class="bg-green-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mb-4">Tackling Water Scarcity</h3>
+                    <p class="text-gray-700 text-sm sm:text-base">
+                        Western Cape faces R500M/year in drought-related losses, while KwaZulu-Natal loses R300M (Agri SA, 2023). Small-scale farmers spend 70–80% of their time on manual irrigation, with inefficient water use reducing yields. AgriPulse’s SAIS uses AI-driven irrigation, precision soil sensors, and weather integration to save 30–40% water and automate 80% of tasks. Unlike costly enterprise solutions (R20,000+), SAIS costs R2,160 with subscriptions from R216/month, offering unmatched affordability and crop-specific analytics for maize, citrus, and more.
+                    </p>
+                </div>
+                <div class="bg-green-50 p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-green-700 mb-4">Combating Livestock Theft</h3>
+                    <p class="text-gray-700 text-sm sm:text-base">
+                        Livestock theft costs South Africa R1.4B annually, with Eastern Cape and KwaZulu-Natal as hotspots (SAPS, 2023). Traditional GPS tags (R500+) are bulky and visible, making them easy targets. AgriPulse’s Livestock Tracker uses discreet, tamper-proof tags (5cm x 3cm, camouflaged) with solar-powered 6-month battery life, reducing theft by 90%. Priced at R1,800 (base) and R480/tag, it offers silent alerts and geofencing, outpacing competitors with its stealth design and herd analytics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-green-800 text-white py-8">
@@ -114,11 +183,13 @@
     </div>
 
     <script>
+        // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
 
+        // WhatsApp Modal Functions
         function openWhatsAppModal() {
             document.getElementById('whatsappModal').classList.remove('hidden');
         }
@@ -126,6 +197,16 @@
         function closeWhatsAppModal() {
             document.getElementById('whatsappModal').classList.add('hidden');
         }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
-    </html>
+            </html>
