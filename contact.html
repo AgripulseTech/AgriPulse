@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - AgriPulse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-green-800 text-white sticky top-0 z-20 shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl sm:text-3xl font-bold flex items-center">
+                <i class="fas fa-leaf mr-2"></i> AgriPulse
+            </div>
+            <ul class="hidden md:flex space-x-6 text-base lg:text-lg">
+                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-200">Products</a></li>
+                <li><a href="about.html" class="hover:text-green-200">About</a></li>
+                <li><a href="news.html" class="hover:text-green-200">News</a></li>
+                <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+                <li><a href="support.html" class="hover:text-green-200">Support</a></li>
+            </ul>
+            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars text-xl sm:text-2xl"></i>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="hidden md:hidden bg-green-700 text-white px-4 sm:px-6 py-4">
+            <ul class="space-y-3 text-base">
+                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-200">Products</a></li>
+                <li><a href="about.html" class="hover:text-green-200">About</a></li>
+                <li><a href="news.html" class="hover:text-green-200">News</a></li>
+                <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+                <li><a href="support.html" class="hover:text-green-200">Support</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-green-100 to-green-200 py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-green-800 mb-4 sm:mb-6">Get in Touch</h1>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-700 mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto">Reach out to AgriPulse for inquiries, product details, or support.</p>
+            <button onclick="openWhatsAppModal()" class="bg-green-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-green-700 flex items-center mx-auto">
+                <i class="fab fa-whatsapp mr-2"></i> Contact via WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-12 sm:py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="max-w-md sm:max-w-lg mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6 sm:mb-8 text-center">Send Us a Message</h2>
+                <div class="space-y-4">
+                    <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <input type="tel" id="phone" placeholder="Your Phone" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <select id="product" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="">Select Product Interest</option>
+                        <option value="SAIS">SAIS</option>
+                        <option value="Livestock Tracker">Livestock Tracker</option>
+                        <option value="AgriPulse App">AgriPulse App</option>
+                    </select>
+                    <textarea id="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                    <button onclick="submitContact()" class="w-full bg-green-600 text-white p-3 rounded-lg hover:bg-green-700">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-12 sm:py-16 bg-green-50">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6 sm:mb-8">Contact Details</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">Email</h3>
+                    <p class="text-gray-700"><a href="mailto:infoagripulse@gmail.com" class="hover:underline">infoagripulse@gmail.com</a></p>
+                </div>
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">WhatsApp</h3>
+                    <p class="text-gray-700">+27 75 292 1162</p>
+                    <button onclick="openWhatsAppModal()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Message Us</button>
+                </div>
+            </div>
+            <p class="text-base sm:text-lg text-gray-700 mt-6 sm:mt-8">
+                Serving farmers in KwaZulu-Natal, Eastern Cape, and Western Cape.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">AgriPulse</h3>
+                    <p class="text-green-200 text-sm sm:text-base">Pulsing innovation into South African agriculture with IoT solutions for small-scale farmers.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li><a href="products.html" class="text-green-200 hover:underline">Products</a></li>
+                        <li><a href="about.html" class="text-green-200 hover:underline">About</a></li>
+                        <li><a href="contact.html" class="text-green-200 hover:underline">Contact</a></li>
+                        <li><a href="support.html" class="text-green-200 hover:underline">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-green-200 text-sm sm:text-base">Email: <a href="mailto:infoagripulse@gmail.com" class="hover:underline">infoagripulse@gmail.com</a></p>
+                    <button onclick="openWhatsAppModal()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 flex items-center text-sm sm:text-base">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                    </button>
+                </div>
+                <div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-4">Follow Us</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li>
+                            <a href="https://www.tiktok.com/@agri_pulse2" target="_blank" class="text-green-200 hover:underline flex items-center">
+                                <i class="fab fa-tiktok mr-2"></i> TikTok
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-sm sm:text-base">© 2025 AgriPulse. All rights reserved. | <a href="#" class="text-green-200 hover:underline">Privacy Policy</a> | <a href="#" class="text-green-200 hover:underline">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Modal -->
+    <div id="whatsappModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full max-w-sm sm:max-w-md">
+            <h3 class="text-xl sm:text-2xl font-bold text-green-800 mb-4">Connect via WhatsApp</h3>
+            <p class="text-gray-700 text-sm sm:text-base mb-6">Contact AgriPulse for inquiries, support, or to learn more about our smart farming solutions.</p>
+            <a href="https://wa.me/27752921162" target="_blank" class="bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-green-700 inline-block">Open WhatsApp</a>
+            <button onclick="closeWhatsAppModal()" class="mt-4 text-gray-600 hover:underline text-sm sm:text-base">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openWhatsAppModal() {
+            document.getElementById('whatsappModal').classList.remove('hidden');
+        }
+
+        function closeWhatsAppModal() {
+            document.getElementById('whatsappModal').classList.add('hidden');
+        }
+
+        function submitContact() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const product = document.getElementById('product').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !phone || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            alert('Thank you for your message! We will get back to you soon.');
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('product').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+</body>
+</html>
